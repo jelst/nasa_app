@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {AuthguardGuard} from './authguard.guard';
 import {UserService} from './user.service';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { CollectionComponent } from './collection/collection.component';
 
 const appRoutes:Routes = [
   {
@@ -38,7 +39,8 @@ const appRoutes:Routes = [
     LoginFormComponent,
     FooterComponent,
     DashboardComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    CollectionComponent
   ],
   imports: [
   RouterModule.forRoot(appRoutes),
