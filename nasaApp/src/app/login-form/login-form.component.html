@@ -1,0 +1,34 @@
+<form (submit)="createAccount($event)">
+    <div *ngIf="visible">
+        Register by entering your information below and clicking the 'Submit' button.
+        <div class="input">
+            <label>Enter Your Email</label>
+            <input type = "text">
+        </div>
+        <div class="input">
+            <label>Enter Your Password</label>
+            <input type = "password">
+        </div>
+        <div class="input">
+        <input type="submit" value="Submit">
+        </div>
+    </div>
+</form>
+
+<button (click)="toggleVis()">NAC</button>
+
+<form (submit)="loginUser($event)">
+    <div class="input">
+        <label>Username</label>
+        <input type = "text">
+    </div>
+    <div class="input">
+        <label>Password</label>
+        <input type = "password">
+    </div>
+    <div class="input">
+        <input type="submit" value="Login">
+    </div>
+</form>
+
+<button (click)="showAbout()">About</button>
