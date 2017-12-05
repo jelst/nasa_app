@@ -8,7 +8,7 @@ export class UserService {
     private isLoggedIn;
     private username;
 
-  constructor() {
+  constructor(/*private httpClient: HttpClient*/) {
       this.isLoggedIn = false;
   }
   setUserLoggedIn(){
@@ -25,6 +25,14 @@ export class UserService {
           }
       })
   }
+  getValid(username){
+      return new Promise((resolve,reject)=>{
+          this.httpClient.get('https://lab5-jelst.c9users.io:8081/api/user/' + username).subscribe(data=>{
+              resolve(data[0][Valid]))
+          }
+      })
+  }
+  
   */
 
 }

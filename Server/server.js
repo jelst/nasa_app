@@ -44,6 +44,7 @@ router.route('/users')
         var user = new User();      // create a new instance of the User model
         user.username = req.body.username;  // set the messages username (comes from the request)
         user.password = req.body.password;
+        user.valid = req.body.valid;
 
         // save the message and check for errors
         user.save(function(err) {
